@@ -4,7 +4,6 @@ services:
     image: mysql:5.7
     volumes:
       - db_data:/var/lib/mysql
-    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: wordpress
@@ -14,7 +13,6 @@ services:
     depends_on:
       - db
     image: phpmyadmin/phpmyadmin
-    restart: always
     ports:
       - "8080:80"
     environment:
@@ -26,7 +24,6 @@ services:
     image: wordpress:latest
     ports:
       - "8000:80"
-    restart: always
     volumes:
       - ./wp-content/:/var/www/html/wp-content
     environment:
