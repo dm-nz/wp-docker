@@ -33,5 +33,6 @@ services:
       WORDPRESS_DB_USER: user
       WORDPRESS_DB_PASSWORD: password
       WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
 volumes:
   db_data:
